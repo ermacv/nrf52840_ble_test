@@ -901,7 +901,7 @@ static void logger_thread(void * arg)
     {
         NRF_LOG_FLUSH();
 
-        vTaskSuspend(NULL); // Suspend myself
+        xTaskNotifyWait(eNoAction, UINT32_MAX, NULL, portMAX_DELAY);
     }
 }
 #endif //NRF_LOG_ENABLED

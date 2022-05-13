@@ -10,9 +10,7 @@ if(NOT CMAKE_TOOLCHAIN_FILE)
     set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_LIST_DIR}/cmake/toolchain/gcc_arm_none_eabi.cmake)
 endif()
 ################################################################################
-enable_language(C)
-################################################################################
-project(NRF52840_BLE_TEST VERSION 1.0.0)
+project(NRF52840_BLE_TEST)
 ###############################################################################
 # Include common files for the project:
 include(${PROJECT_SOURCE_DIR}/cmake/cpu/gcc_arm_cortex_m4_hf.cmake)
@@ -24,11 +22,5 @@ include(${PROJECT_SOURCE_DIR}/cmake/common/warnings.cmake)
 include(${PROJECT_SOURCE_DIR}/cmake/proj/conf.cmake)
 ################################################################################
 add_subdirectory(${PROJECT_SOURCE_DIR}/libs/nrf_sdk)
-################################################################################
-add_executable(${PROJECT_NAME})
-target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/main.c)
-target_link_libraries(${PROJECT_NAME} PRIVATE nrf52840_startup)
-target_link_libraries(${PROJECT_NAME} PRIVATE nrf52840_system)
-target_link_options(${PROJECT_NAME} PRIVATE -T${NRF_SDK_DIR}/modules/nrfx/mdk/nrf52840_xxaa.ld)
-target_link_options(${PROJECT_NAME} PRIVATE -L${NRF_SDK_DIR}/modules/nrfx/mdk)
+add_subdirectory(${PROJECT_SOURCE_DIR}/modules/application)
 ################################################################################

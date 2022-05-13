@@ -14,6 +14,6 @@ target_compile_definitions(nrf52840_startup PRIVATE __STARTUP_CLEAR_BSS)
 add_library(nrf52840_system STATIC)
 target_sources(nrf52840_system PRIVATE ${NRF_SDK_DIR}/modules/nrfx/mdk/system_nrf52840.c)
 target_include_directories(nrf52840_system PUBLIC ${NRF_SDK_DIR}/modules/nrfx/mdk)
-target_compile_definitions(nrf52840_system PRIVATE NRF52840_XXAA)
-target_link_libraries(nrf52840_system PRIVATE libs_nrf_sdk_components_toolchain_cmsis)
+target_compile_definitions(nrf52840_system PUBLIC NRF52840_XXAA)
+target_link_libraries(nrf52840_system PUBLIC libs_nrf_sdk_components_toolchain_cmsis)
 ################################################################################

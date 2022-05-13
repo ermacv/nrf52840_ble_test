@@ -23,3 +23,12 @@ include(${PROJECT_SOURCE_DIR}/cmake/common/linker_options.cmake)
 include(${PROJECT_SOURCE_DIR}/cmake/common/warnings.cmake)
 include(${PROJECT_SOURCE_DIR}/cmake/proj/conf.cmake)
 ################################################################################
+add_subdirectory(${PROJECT_SOURCE_DIR}/libs/nrf_sdk)
+################################################################################
+add_executable(${PROJECT_NAME})
+target_sources(${PROJECT_NAME} PRIVATE ${PROJECT_SOURCE_DIR}/main.c)
+target_link_libraries(${PROJECT_NAME} PRIVATE nrf52840_startup)
+target_link_libraries(${PROJECT_NAME} PRIVATE nrf52840_system)
+target_link_options(${PROJECT_NAME} PRIVATE -T${NRF_SDK_DIR}/modules/nrfx/mdk/nrf52840_xxaa.ld)
+target_link_options(${PROJECT_NAME} PRIVATE -L${NRF_SDK_DIR}/modules/nrfx/mdk)
+################################################################################

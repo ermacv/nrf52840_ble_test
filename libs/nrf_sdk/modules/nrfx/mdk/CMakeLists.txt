@@ -7,9 +7,8 @@ project(libs_nrf_sdk_modules_nrfx_mdk)
 ################################################################################
 add_library(nrf52840_startup STATIC EXCLUDE_FROM_ALL)
 target_sources(nrf52840_startup PRIVATE ${NRF_SDK_DIR}/modules/nrfx/mdk/gcc_startup_nrf52840.S)
-target_compile_definitions(nrf52840_startup PRIVATE __STACK_SIZE=2048)
-target_compile_definitions(nrf52840_startup PRIVATE __HEAP_SIZE=1024)
-target_compile_definitions(nrf52840_startup PRIVATE __STARTUP_CLEAR_BSS)
+target_compile_definitions(nrf52840_startup PRIVATE __STACK_SIZE=16384)
+target_compile_definitions(nrf52840_startup PRIVATE __HEAP_SIZE=16384)
 ################################################################################
 add_library(nrf52840_system STATIC EXCLUDE_FROM_ALL)
 target_sources(nrf52840_system PRIVATE ${NRF_SDK_DIR}/modules/nrfx/mdk/system_nrf52840.c)

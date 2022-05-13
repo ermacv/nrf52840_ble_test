@@ -11,7 +11,7 @@ extern "C" {
 #define BUTTONS_ACTIVE_STATE 0
 #define BUTTON_PULL    NRF_GPIO_PIN_PULLUP
 
-#define BUTTON_1       1
+#define BUTTON_1       7
 #define BUTTONS_LIST { BUTTON_1 }
 
 /*

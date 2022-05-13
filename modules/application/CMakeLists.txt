@@ -32,16 +32,16 @@ set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_DIRECTORY ${CMAK
 set_target_properties(${PROJECT_NAME} PROPERTIES RUNTIME_OUTPUT_NAME ${CMAKE_PROJECT_NAME})
 ################################################################################
 add_custom_command(
-  OUTPUT ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.bin
-  OUTPUT ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex
-  COMMAND ${CMAKE_OBJCOPY} ARGS -Obinary $<TARGET_FILE:${PROJECT_NAME}> ${PROJECT_NAME}.bin
-  COMMAND ${CMAKE_OBJCOPY} ARGS -Oihex $<TARGET_FILE:${PROJECT_NAME}> ${PROJECT_NAME}.hex
+  OUTPUT ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin
+  OUTPUT ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.hex
+  COMMAND ${CMAKE_OBJCOPY} ARGS -Obinary $<TARGET_FILE:${PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.bin
+  COMMAND ${CMAKE_OBJCOPY} ARGS -Oihex $<TARGET_FILE:${PROJECT_NAME}> ${CMAKE_PROJECT_NAME}.hex
   DEPENDS $<TARGET_FILE:${PROJECT_NAME}>
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
 )
 ################################################################################
 add_custom_target(${PROJECT_NAME}_exe ALL
-  DEPENDS ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.bin
-  DEPENDS ${CMAKE_BINARY_DIR}/${PROJECT_NAME}.hex
+  DEPENDS ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.bin
+  DEPENDS ${CMAKE_BINARY_DIR}/${CMAKE_PROJECT_NAME}.hex
 )
 ################################################################################

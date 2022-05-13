@@ -1,0 +1,11 @@
+usb 0
+device NRF52840_XXAA
+si SWD
+speed 4000
+r
+h
+loadfile ${SOFTDEVICE_HEX}
+loadfile ${APPLICATION_HEX}
+r
+g
+qc

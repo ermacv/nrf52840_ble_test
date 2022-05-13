@@ -38,8 +38,8 @@
 /*-----------------------------------------------------------
  * Possible configurations for system timer
  */
-#define FREERTOS_USE_RTC      0 /**< Use real time clock for the system */
-#define FREERTOS_USE_SYSTICK  1 /**< Use SysTick timer for system */
+#define FREERTOS_USE_RTC      1 /**< Use real time clock for the system */
+#define FREERTOS_USE_SYSTICK  0 /**< Use SysTick timer for system */
 
 /*-----------------------------------------------------------
  * Application specific definitions.
@@ -63,7 +63,7 @@
 #define configTICK_RATE_HZ                                                        1024
 #define configMAX_PRIORITIES                                                      ( 3 )
 #define configMINIMAL_STACK_SIZE                                                  ( 60 )
-#define configTOTAL_HEAP_SIZE                                                     ( 4096 )
+#define configTOTAL_HEAP_SIZE                                                     ( 32 * 1024 )
 #define configMAX_TASK_NAME_LEN                                                   ( 4 )
 #define configUSE_16_BIT_TICKS                                                    0
 #define configIDLE_SHOULD_YIELD                                                   1

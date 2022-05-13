@@ -13,7 +13,7 @@ target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/q
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/stream_buffer.c)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/tasks.c)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/timers.c)
-target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/portable/MemMang/heap_5.c)
+target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/portable/MemMang/heap_4.c)
 target_include_directories(${PROJECT_NAME} PUBLIC ${NRF_SDK_DIR}/external/freertos/source/include)
 ################################################################################
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR})

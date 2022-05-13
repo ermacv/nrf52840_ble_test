@@ -13,7 +13,7 @@ target_include_directories(${PROJECT_NAME} PUBLIC ${NRF_SDK_DIR}/components/libr
 target_include_directories(${PROJECT_NAME} PUBLIC ${NRF_SDK_DIR}/components/libraries/util)
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR})
 target_link_libraries(${PROJECT_NAME} PUBLIC nrf52840_system)
-target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_s113)
+target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_common)
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_libraries_log)
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_libraries_strerror)
 ################################################################################

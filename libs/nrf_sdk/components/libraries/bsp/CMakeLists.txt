@@ -11,7 +11,6 @@ target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/components/libraries/bsp/b
 target_include_directories(${PROJECT_NAME} PUBLIC ${NRF_SDK_DIR}/components/libraries/bsp)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_button)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_boards)
-target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_s113)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_common)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_timer)
 ################################################################################

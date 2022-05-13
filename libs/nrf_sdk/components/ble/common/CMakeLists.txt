@@ -12,7 +12,6 @@ target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/components/ble/common/ble_
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/components/ble/common/ble_srv_common.c)
 target_include_directories(${PROJECT_NAME} PUBLIC ${NRF_SDK_DIR}/components/ble/common)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_util)
-target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_s113)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_common)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_atomic)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_atomic_flags)

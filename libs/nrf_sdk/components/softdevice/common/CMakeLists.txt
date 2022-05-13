@@ -14,5 +14,5 @@ target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_libraries_
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_experimental_section_vars)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_log)
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_external_freertos)
-target_compile_definitions(${PROJECT_NAME} PUBLIC S113)
+target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_s140)
 ################################################################################

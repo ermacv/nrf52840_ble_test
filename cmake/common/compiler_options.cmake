@@ -5,7 +5,10 @@ if(CMAKE_C_COMPILER_ID STREQUAL "GNU")
     # Omit unused data and functions to reduce executable size
     add_compile_options(-fdata-sections)
     add_compile_options(-ffunction-sections)
+    add_compile_options(-fno-strict-aliasing)
     add_compile_options(-fdiagnostics-color=always)
+    add_compile_options(-fno-builtin)
+    add_compile_options(-fshort-enums)
 endif(CMAKE_C_COMPILER_ID STREQUAL "GNU")
 ################################################################################
 # Add common language standards

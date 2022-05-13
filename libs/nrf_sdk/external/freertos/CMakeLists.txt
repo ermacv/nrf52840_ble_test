@@ -17,7 +17,6 @@ target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/p
 target_include_directories(${PROJECT_NAME} PUBLIC ${NRF_SDK_DIR}/external/freertos/source/include)
 ################################################################################
 target_include_directories(${PROJECT_NAME} PUBLIC ${PROJECT_SOURCE_DIR})
-target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_softdevice_s113)
 target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_util)
 ################################################################################
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/portable/GCC/nrf52/port.c)
@@ -29,4 +28,6 @@ target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_modules_nrfx_hal)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_softdevice_common)
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_integration_nrfx_legacy)
+################################################################################
+target_compile_definitions(${PROJECT_NAME} PUBLIC FREERTOS)
 ################################################################################

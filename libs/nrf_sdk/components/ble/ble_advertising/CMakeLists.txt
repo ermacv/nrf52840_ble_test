@@ -12,5 +12,4 @@ target_link_libraries(${PROJECT_NAME} PUBLIC libs_nrf_sdk_components_libraries_u
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_ble_common)
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_libraries_log)
 target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_softdevice_common)
-target_link_libraries(${PROJECT_NAME} PRIVATE libs_nrf_sdk_components_softdevice_s113)
 ################################################################################

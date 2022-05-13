@@ -5,7 +5,7 @@ enable_language(C)
 ################################################################################
 project(libs_nrf_sdk_components_libraries_util)
 ################################################################################
-add_library(${PROJECT_NAME} STATIC)
+add_library(${PROJECT_NAME} STATIC EXCLUDE_FROM_ALL)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/components/libraries/util/app_util_platform.c)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/components/libraries/util/app_error.c)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/components/libraries/util/app_error_weak.c)

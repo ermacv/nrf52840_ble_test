@@ -5,7 +5,7 @@ enable_language(C)
 ################################################################################
 project(libs_nrf_sdk_external_freertos)
 ################################################################################
-add_library(${PROJECT_NAME} STATIC)
+add_library(${PROJECT_NAME} STATIC EXCLUDE_FROM_ALL)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/croutine.c)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/event_groups.c)
 target_sources(${PROJECT_NAME} PRIVATE ${NRF_SDK_DIR}/external/freertos/source/list.c)
